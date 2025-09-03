@@ -1,0 +1,325 @@
+/* Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: #fff;
+    background-color: #0b0f29;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #00aaff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 40px;
+    background: url('./media/Untitled.png') center/cover no-repeat;
+}
+.hero-text {
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+}
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.hero-text button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aaff;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.hero-text button:hover {
+    background-color: #0088cc;
+}
+.hero-images {
+    display: flex;
+    gap: 20px;
+}
+.hero-images img {
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Info Section */
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background: url('./media/3392075.jpg') center/cover no-repeat;
+}
+.info-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 15px;
+    text-align: center;
+}
+.info-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade { animation: fadeIn 1.2s ease forwards; }
+.animate-left { animation: slideLeft 1.2s ease forwards; }
+.animate-right { animation: slideRight 1.2s ease forwards; }
+.animate-up { animation: fadeIn 1.5s ease forwards; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .all_blogs{
+         display: flex;
+          flex-direction: column;
+          align-items: center;
+    }
+}
+.latest_posts{
+    background:linear-gradient(to right , rgba(69, 71, 163, 0.89) , rgb(48, 22, 71));
+   min-height:100vh;
+   padding-bottom: 40px; 
+}
+.posts{
+   text-align: center;
+   font-size: 3rem;
+   padding-top: 20px;
+}
+.all_blogs{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     margin:30px auto;
+     flex-wrap: wrap;
+     gap:30px;
+     max-width: 1300px;
+     margin-bottom: 0px;
+}
+
+.same{
+      height:470px;
+      width:300px;
+      border:2px solid white;
+      background-color: white;
+      border-radius: 10px;
+}
+img{
+    height: 250px;
+    width:295px;
+    padding:10px;
+    border-radius:20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+.p_text{
+    color:rgb(58, 56, 56);
+    padding:10px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .all_blogs{
+         display: flex;
+          flex-direction: column;
+          gap:15px;
+          align-items: center;
+    }
+}
+img:hover{
+      transform: scale(1.05) translatey(-5px) ;
+      /* margin:auto; */
+      margin-top: 10px;
+       box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Shadow add */
+}
+
+footer{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 350px;
+    background: linear-gradient(to right, #0b0f29, #151a3b);
+    padding-top: 40px;
+}
+
+.footer_class{
+     margin-top: 0px;
+     width: 800px;
+     height: 120px;
+     /* border:2px white solid; */
+      display: flex; 
+     justify-content: space-around;
+}
+.footer_h1{
+     margin-top: 30px;
+}
+.second_box{
+     display: flex;
+     flex-direction: row;
+      margin-top: 30px;
+      justify-content: space-around;
+      width:250px;
+}
+hr{
+     height:3px;
+     width:300px;
+     margin-top:150px;
+}
+
+.footer-hr {
+  border: none;
+  height: 3px;
+  width: 80%;
+  margin: 15px auto;
+  background: linear-gradient(to right, rgb(42, 42, 88),rgb(94, 130, 145));
+  border-radius: 5px;
+}
+.copyright{
+     margin-top: 25px;
+}
+.footer_h1:hover,.second_box:hover {
+  text-shadow: 2px 2px 5px rgba(155, 74, 247, 0.7),
+               4px 4px 10px rgba(45, 56, 104, 0.5),
+               6px 6px 15px rgba(64, 64, 146, 0.3);
+}
+
+.second_box h1:hover {
+    color: #00aaff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+@media(max-width: 668px){
+    
+    .footer_class{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-hr{
+         margin-top: 50px;
+    }
+
+}
+
+/* Navbar basic */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown hidden content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+top:100%;
+  left: 0;
+  background: white;
+  min-width: 180px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1000;
+
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
