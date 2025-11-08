@@ -1,0 +1,162 @@
+/* === Adventure Blog Styles === */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: #f4f9ff;
+  color: #222;
+}
+
+/* ===== Header ===== */
+.header {
+  background: linear-gradient(to right, #0078ff, #00c6ff);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  color: white;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #e3f2ff, #ffffff);
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #004c9e;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.hero-images img {
+  flex: 1;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Info Cards ===== */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 30px;
+}
+
+.info-card {
+  background-color: #eaf5ff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h2 {
+  color: #0078ff;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #f0f7ff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-top: 2px solid #d9ecff;
+}
+
+.footer_class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer_h1 {
+  font-size: 1.5rem;
+  color: #004c9e;
+}
+
+.second_box {
+  display: flex;
+  gap: 20px;
+}
+
+.second_box h1 {
+  font-size: 1rem;
+  color: #004c9e;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.second_box h1:hover {
+  color: #0078ff;
+}
+
+.footer-hr {
+  border: none;
+  border-top: 1px solid #cfe6ff;
+  margin: 15px 0;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #333;
+}

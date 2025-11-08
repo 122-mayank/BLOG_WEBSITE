@@ -1,0 +1,159 @@
+/* === Food Blog Styles === */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: #fffdf8;
+  color: #333;
+}
+
+/* ===== Header Section ===== */
+.header {
+  background-color: #ffe8b3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+}
+
+.logo h1 {
+  font-size: 1.6rem;
+  color: #3b2f00;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3b2f00;
+  margin-left: 25px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff7df;
+  padding: 60px 20px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #3b2f00;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.hero-images img {
+  flex: 1;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Info Cards ===== */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 30px;
+}
+
+.info-card {
+  background-color: #fff1d1;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h2 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #fff7df;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-top: 2px solid #ffe8b3;
+}
+
+.footer_class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer_h1 {
+  font-size: 1.5rem;
+  color: #3b2f00;
+}
+
+.second_box {
+  display: flex;
+  gap: 20px;
+}
+
+.second_box h1 {
+  font-size: 1rem;
+  color: #3b2f00;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.second_box h1:hover {
+  color: #ff9800;
+}
+
+.footer-hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #666;
+}
