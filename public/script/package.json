@@ -1,0 +1,20 @@
+{
+  "name": "Blog Website",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev"  :    "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Mayank Saini",
+  "license": "ISC",
+  "description": "A website for the blog",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
