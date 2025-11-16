@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="logo">
+      <img src="/blog.png" alt="Blog Logo">
+      <h1>Waves of Words</h1>
+  </div>
+
+  <!-- Mobile Menu Button -->
+  <button class="menu-btn" id="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+  </button>
+
+  <nav id="navbar">
+    <a href="/">Home</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Blogs</button>
+      <div class="dropdown-content">
+        <a href="/food_blog">Food Blog</a>
+        <a href="/adventure_blog">Adventure Blog</a>
+        <a href="/notes_blog">Notes Blog</a>
+        <a href="/office_blog">Office Blog</a>
+      </div>
+    </div>
+
+    <a href="/signin" class="signin-btn">Sign In</a>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const nav = document.getElementById("navbar");
+
+  btn.addEventListener("click", () => {
+     nav.classList.toggle("active");
+     btn.classList.toggle("open");
+  });
+</script>

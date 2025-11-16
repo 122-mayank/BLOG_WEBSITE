@@ -1,0 +1,162 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", system-ui;
+  color: #fff;
+  background-color: #0b0f29;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a,
+.dropbtn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+.dropbtn:hover {
+  color: #00aaff;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Dropdown Body */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111d3b;
+  min-width: 150px;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 14px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #062045;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Sign In button */
+.signin-btn {
+  background: #00aaff;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.signin-btn:hover {
+  background: #0088cc;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Animation for open state */
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    background-color: rgba(0,0,0,0.95);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    transform: translateX(100%);
+    transition: 0.4s ease;
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: relative;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+}
