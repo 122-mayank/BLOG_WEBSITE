@@ -1,162 +1,212 @@
-/* === Adventure Blog Styles === */
+/* ---------------- ADVENTURE BLOG EXQUISITE STYLES ---------------- */
+
 body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  background-color: #f4f9ff;
-  color: #222;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #050816;
+    color: #e0e0e0;
+    overflow-x: hidden;
 }
 
-/* ===== Header ===== */
-.header {
-  background: linear-gradient(to right, #0078ff, #00c6ff);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 60px;
-  color: white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+/* --- Hero Section --- */
+.adv-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(5,8,22,0.9) 100%);
 }
 
-.logo img {
-  width: 45px;
-  height: 45px;
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
 }
 
-.logo h1 {
-  font-size: 1.6rem;
-  color: white;
+.hero-content h1 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(2rem, 10vw, 6rem);
+    letter-spacing: 15px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(255,255,255,0.2);
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  margin-left: 25px;
-  font-weight: 600;
-  transition: opacity 0.3s ease;
+.hero-content h1 span {
+    background: linear-gradient(to bottom, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-nav a:hover {
-  opacity: 0.8;
+.hero-content p {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-top: 20px;
 }
 
-/* ===== Hero Section ===== */
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 60px 20px;
-  background: linear-gradient(to bottom right, #e3f2ff, #ffffff);
+/* Scroll Indicator */
+.mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #555;
+    border-radius: 20px;
+    margin: 50px auto 0;
+    position: relative;
+}
+.mouse::after {
+    content: "";
+    width: 4px;
+    height: 8px;
+    background: #00d2ff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    border-radius: 2px;
+    animation: scrollMove 2s infinite;
 }
 
-.hero-text {
-  flex: 1;
-  max-width: 500px;
-  min-width: 300px;
+@keyframes scrollMove {
+    0% { opacity: 0; top: 8px; }
+    50% { opacity: 1; }
+    100% { opacity: 0; top: 25px; }
 }
 
-.hero-text h1 {
-  font-size: 2.8rem;
-  color: #004c9e;
-  margin-bottom: 20px;
+/* --- Container & Grid --- */
+.adventure-container {
+    max-width: 1300px;
+    margin: 100px auto;
+    padding: 0 40px;
 }
 
-.hero-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
+.section-header {
+    margin-bottom: 60px;
+    border-left: 4px solid #00d2ff;
+    padding-left: 20px;
 }
 
-.hero-images img {
-  flex: 1;
-  max-width: 450px;
-  border-radius: 15px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+.coord {
+    font-family: monospace;
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
 }
 
-/* ===== Info Cards ===== */
-.info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 50px 20px;
-  gap: 30px;
+.section-header h2 {
+    font-size: 2.5rem;
+    margin: 0;
 }
 
-.info-card {
-  background-color: #eaf5ff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.expedition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
 }
 
-.info-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+/* --- Adventure Cards --- */
+.adv-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 0 30px 0 30px; /* Asymmetric cut */
+    overflow: hidden;
+    transition: 0.5s ease;
 }
 
-.info-card h2 {
-  color: #0078ff;
-  margin-bottom: 10px;
+.adv-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    border-color: #00d2ff;
+    box-shadow: 0 20px 40px rgba(0,210,255,0.1);
 }
 
-.info-card p {
-  font-size: 1rem;
-  line-height: 1.6;
+.adv-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
 }
 
-/* ===== Footer ===== */
-footer {
-  background-color: #f0f7ff;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 40px;
-  border-top: 2px solid #d9ecff;
+.adv-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(40%);
+    transition: 0.8s ease;
 }
 
-.footer_class {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+.adv-card:hover .adv-image img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
 }
 
-.footer_h1 {
-  font-size: 1.5rem;
-  color: #004c9e;
+.date-tag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #00d2ff;
+    color: #000;
+    padding: 5px 15px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    transform: skewX(-15deg);
 }
 
-.second_box {
-  display: flex;
-  gap: 20px;
+.adv-body {
+    padding: 30px;
 }
 
-.second_box h1 {
-  font-size: 1rem;
-  color: #004c9e;
-  cursor: pointer;
-  transition: color 0.3s;
+.location {
+    color: #00d2ff;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-.second_box h1:hover {
-  color: #0078ff;
+.adv-body h3 {
+    margin: 10px 0 20px;
+    font-size: 1.6rem;
+    font-weight: 800;
 }
 
-.footer-hr {
-  border: none;
-  border-top: 1px solid #cfe6ff;
-  margin: 15px 0;
+.adv-body p {
+    color: #888;
+    line-height: 1.8;
+    font-size: 0.95rem;
 }
 
-.copyright {
-  font-size: 0.9rem;
-  color: #333;
+.explore-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 25px;
+    border: 1px solid #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .adventure-container { padding: 0 20px; }
+    .expedition-grid { grid-template-columns: 1fr; }
 }

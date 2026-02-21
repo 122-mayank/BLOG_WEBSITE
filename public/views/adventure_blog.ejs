@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adventure Blog | Waves of Words</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/adventure_blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Awaits | Waves of Words</title>
+    <link rel="stylesheet" href="/adventure_blog.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="/blog.png" alt="Blog Logo">
-      <h1>Waves of Words</h1>
-    </div>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/signin">Sign In</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Adventure Awaits</h1>
-      <p>Step outside your comfort zone and into the world of breathtaking landscapes, thrilling journeys, and untold stories.</p>
-    </div>
-    <div class="hero-images">
-      <img src="/adventure_blog.jpg" alt="Adventure Blog">
-    </div>
-  </section>
+    <%- include('partials/header') %>
 
-  <section class="info">
-    <div class="info-card">
-      <h2>🏔 Mountain Diaries</h2>
-      <p>Climbing the Himalayas was more than a trek — it was a journey within. Read the experience of finding peace at 15,000 feet.</p>
-    </div>
-    <div class="info-card">
-      <h2>🌍 Wanderlust Wonders</h2>
-      <p>Explore the raw beauty of remote villages, hidden waterfalls, and cultures untouched by time.</p>
-    </div>
-  </section>
+    <section class="adv-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="glitch-text">BEYOND THE <span>HORIZON</span></h1>
+            <p>Documenting the raw, the wild, and the unexplored.</p>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <div class="footer_class">
-      <h1 class="footer_h1">Waves of Words</h1>
-      <div class="second_box">
-        <h1>Blogs</h1>
-        <h1>Sign In</h1>
-      </div>
-    </div>
-    <hr class="footer-hr">
-    <p class="copyright">© 2025 Waves of Words</p>
-  </footer>
+    <main class="adventure-container">
+        <div class="section-header">
+            <span class="coord">45.5231° N, 122.6765° W</span>
+            <h2>Latest Expeditions</h2>
+        </div>
+
+        <div class="expedition-grid">
+            <article class="adv-card">
+                <div class="adv-image">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800" alt="Mountain">
+                    <div class="date-tag">AUG 2025</div>
+                </div>
+                <div class="adv-body">
+                    <span class="location">Icelandic Highlands</span>
+                    <h3>The Land of Fire and Ice</h3>
+                    <p>A 14-day solo trek across the volcanic deserts and emerald valleys of the interior...</p>
+                    <a href="#" class="explore-btn">See Gallery</a>
+                </div>
+            </article>
+
+            <article class="adv-card">
+                <div class="adv-image">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800" alt="Lake">
+                    <div class="date-tag">SEP 2025</div>
+                </div>
+                <div class="adv-body">
+                    <span class="location">Dolomites, Italy</span>
+                    <h3>Chasing Alpine Sunsets</h3>
+                    <p>Finding the perfect vantage point above the clouds at 3,000 meters above sea level.</p>
+                    <a href="#" class="explore-btn">Read Entry</a>
+                </div>
+            </article>
+
+            <article class="adv-card">
+                <div class="adv-image">
+                    <img src="https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&w=800" alt="Forest">
+                    <div class="date-tag">OCT 2025</div>
+                </div>
+                <div class="adv-body">
+                    <span class="location">Amazon Basin</span>
+                    <h3>Secrets of the Rainforest</h3>
+                    <p>Navigating the dense canopy and discovering species hidden from the modern world.</p>
+                    <a href="#" class="explore-btn">Listen to Logs</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
 </body>
 </html>

@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Blog | Waves of Words</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/food_blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Adventures | Waves of Words</title>
+    <link rel="stylesheet" href="/food_blog.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="/blog.png" alt="Blog Logo">
-      <h1>Waves of Words</h1>
-    </div>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/signin">Sign In</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Flavors that Tell a Story</h1>
-      <p>Welcome to the Food Blog — where every bite comes with a story. Explore recipes, restaurant diaries, and food journeys from around the world.</p>
-    </div>
-    <div class="hero-images">
-      <img src="/food_blog.jpg" alt="Food Blog">
-    </div>
-  </section>
+    <%- include('partials/header') %>
 
-  <section class="info">
-    <div class="info-card">
-      <h2>🍲 Latest Food Tales</h2>
-      <p>From spicy Indian curries to sweet French pastries — dive into the world of flavors that define cultures and connections.</p>
-    </div>
-    <div class="info-card">
-      <h2>🍕 Featured Recipe: Cheesy Veg Pizza</h2>
-      <p>Soft dough, melting cheese, and fresh veggies — experience a homemade delight that’s easy to cook and impossible to resist.</p>
-    </div>
-  </section>
+    <header class="food-hero">
+        <div class="hero-content">
+            <span class="category-tag">Culinary Journey</span>
+            <h1>Flavors that tell a <span>Story.</span></h1>
+            <p>From sizzling street food to gourmet kitchen secrets. Explore recipes that nourish the soul and spark the imagination.</p>
+        </div>
+    </header>
 
-  <footer>
-    <div class="footer_class">
-      <h1 class="footer_h1">Waves of Words</h1>
-      <div class="second_box">
-        <h1>Blogs</h1>
-        <h1>Sign In</h1>
-      </div>
-    </div>
-    <hr class="footer-hr">
-    <p class="copyright">© 2025 Waves of Words</p>
-  </footer>
+    <main class="container">
+        <div class="food-grid">
+            
+            <article class="food-card large">
+                <div class="card-img">
+                    <img src="/food_blog.jpg" alt="Signature Dish">
+                    <div class="overlay">
+                        <span class="badge">Must Try</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="meta">
+                        <span>🕒 45 Mins</span> • <span>🔥 Intermediate</span>
+                    </div>
+                    <h2>The Secret to Perfect Homemade Ramen</h2>
+                    <p>Unlock the mysteries of the 24-hour broth, the art of the perfect soft-boiled ajitsuke egg, and hand-rolled noodles. This deep dive into Umami will change how you view comfort food forever.</p>
+                    <div class="card-footer">
+                        <span class="author">By Chef Marco</span>
+                        <a href="#" class="read-more">Read Recipe →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500" alt="Pizza">
+                </div>
+                <div class="card-info">
+                    <div class="meta">
+                        <span>🕒 12 Hours</span> • <span>🌱 Vegetarian</span>
+                    </div>
+                    <h3>Sourdough Pizza Nights</h3>
+                    <p>Why patience is the main ingredient for a crispy, bubbly crust. We explore cold-fermentation techniques that bring artisan pizzeria quality to your home oven.</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">View Guide</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=500" alt="Healthy Bowl">
+                </div>
+                <div class="card-info">
+                    <div class="meta">
+                        <span>🕒 15 Mins</span> • <span>⚡ Quick Fix</span>
+                    </div>
+                    <h3>Top 5 Summer Salads</h3>
+                    <p>Fresh, vibrant, and ready in under 10 minutes. Discover how zesty lemon vinaigrettes and seasonal stone fruits can transform a simple bowl of greens into a gourmet feast.</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">Get Recipes</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
 </body>
 </html>

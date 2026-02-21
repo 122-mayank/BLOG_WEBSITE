@@ -3,127 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waves of Words</title>
-
-    <!-- Google Fonts -->
+    <title>Waves of Words | Your Creative Space</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/header.css">
     <link rel="stylesheet" href="/index.css">
-
+    <link rel="stylesheet" href="/footer.css">
 </head>
 <body>
 
-    <!-- Header -->
     <%- include('partials/header') %>
 
-    <!-- ================= HERO SECTION ================= -->
     <section class="hero">
-        <div class="hero-text animate-fade">
-            <h1>Your Voice, Your Space</h1>
-            <p>
-                Every story deserves to be told, and your blog is the perfect stage for it.
-                Whether you’re an aspiring writer, a seasoned creator, or simply someone
-                with a passion to share — this is where your ideas can come alive.
-            </p>
-            <button>Start Blogging</button>
-        </div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="badge">Welcome to the Future of Blogging</span>
+                <h1>Your Voice, Your <span>Space.</span></h1>
+                <p>
+                    Every story deserves to be told. Whether you’re an aspiring writer, a seasoned creator, or a passionate hobbyist—this is the digital canvas where your ideas transform into waves of inspiration.
+                </p>
+                <div class="hero-btns">
+                    <button class="btn-primary">Start Blogging</button>
+                    <button class="btn-secondary">Explore Stories</button>
+                </div>
+            </div>
 
-        <div class="hero-images">
-            <img src="/7802436.jpg" alt="Writing Desk" class="animate-left">
-            <img src="/flat-lay-woman-office-desk-female-hands-with-coffee-laptop-pink-carnation-stationery-blue-table-top-view.jpg"
-                 alt="Workspace" class="animate-right">
-        </div>
-    </section>
-
-    <!-- ================= INFO SECTION ================= -->
-    <section class="info">
-        <div class="info-card animate-up">
-            <h2>Share Your Stories</h2>
-            <p>
-                Write about your daily adventures, deep thoughts, or creative projects.
-                Your words can inspire, inform, and connect with people across the globe.
-            </p>
-        </div>
-
-        <div class="info-card animate-up">
-            <h2>Customizable Designs</h2>
-            <p>
-                Create a blog that truly feels like you. Our tools make it easy to
-                customize layouts, colors, and features to match your style.
-            </p>
-        </div>
-    </section>
-
-    <!-- ================= LATEST POSTS ================= -->
-    <section class="latest_posts">
-    <h1 class="posts">Latest Posts</h1>
-
-    <div class="all_blogs">
-
-        <div class="same">
-            <img src="/food_blog.jpg" alt="Food Blog">
-            <p class="p_text">
-                A journey through flavors, spices, and stories. From street food adventures to gourmet recipes.
-            </p>
-        </div>
-
-        <div class="same">
-            <img src="/adventure_blog.jpg" alt="Adventure Blog">
-            <p class="p_text">
-                Explore breathtaking destinations and thrilling experiences from around the world.
-            </p>
-        </div>
-
-        <div class="same">
-            <img src="/blog_notes.jpg" alt="Notes Blog">
-            <p class="p_text">
-                Your digital notebook of ideas, inspirations, and reflections worth remembering.
-            </p>
-        </div>
-
-        <div class="same">
-            <img src="/office_blog.jpg" alt="Office Blog">
-            <p class="p_text">
-                Discover workplace insights, productivity hacks, and meaningful professional experiences.
-            </p>
-        </div>
-
-        <!-- NEW BLOG 5 -->
-        <div class="same">
-            <img src="/tech_blog.jpg" alt="Tech Blog">
-            <p class="p_text">
-                Latest trends in technology, coding guides, and deep insights into the digital world.
-            </p>
-        </div>
-
-        <!-- NEW BLOG 6 -->
-        <div class="same">
-            <img src="/lifestyle_blog.jpg" alt="Lifestyle Blog">
-            <p class="p_text">
-                A blend of wellness tips, daily habits, motivation, and personal growth inspiration.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <div class="footer_class">
-            <h1 class="footer_h1">Waves of Words</h1>
-            <div class="second_box">
-                <h1>Blogs</h1>
-                <h1>Sign In</h1>
+            <div class="hero-visual">
+                <div class="image-stack">
+                    <img src="/7802436.jpg" alt="Writing Desk" class="img-1">
+                    <img src="/flat-lay-woman-office-desk-female-hands-with-coffee-laptop-pink-carnation-stationery-blue-table-top-view.jpg" alt="Workspace" class="img-2">
+                </div>
             </div>
         </div>
+    </section>
 
-        <hr class="footer-hr">
+    <section class="info">
+        <div class="info-card">
+            <div class="icon">✨</div>
+            <h2>Share Your Stories</h2>
+            <p>Write about your daily adventures or deep thoughts. Your words can inspire and connect with people globally.</p>
+        </div>
 
-        <p class="copyright">© 2025 Waves of Words</p>
-    </footer>
+        <div class="info-card">
+            <div class="icon">🎨</div>
+            <h2>Customizable Designs</h2>
+            <p>Create a blog that truly feels like you. Easily customize layouts and features to match your unique style.</p>
+        </div>
+    </section>
+
+    <section class="latest_posts">
+        <div class="section-title">
+            <h1 class="posts">Explore the Waves</h1>
+            <p>Dive into our most popular categories and latest updates</p>
+        </div>
+
+        <div class="all_blogs">
+            <div class="same">
+                <div class="card-img-container">
+                    <img src="/food_blog.jpg" alt="Food Blog">
+                    <span class="category-chip">Culinary</span>
+                </div>
+                <div class="card-content">
+                    <p class="p_text">A journey through flavors and spices. From street food to gourmet recipes.</p>
+                </div>
+            </div>
+
+            <div class="same">
+                <div class="card-img-container">
+                    <img src="/adventure_blog.jpg" alt="Adventure Blog">
+                    <span class="category-chip">Travel</span>
+                </div>
+                <div class="card-content">
+                    <p class="p_text">Explore breathtaking destinations and thrilling experiences from around the world.</p>
+                </div>
+            </div>
+
+            <div class="same">
+                <div class="card-img-container">
+                    <img src="/blog_notes.jpg" alt="Notes Blog">
+                    <span class="category-chip">Ideas</span>
+                </div>
+                <div class="card-content">
+                    <p class="p_text">Your digital notebook of reflections, sparks of inspiration, and thoughts worth keeping.</p>
+                </div>
+            </div>
+
+            <div class="same">
+                <div class="card-img-container">
+                    <img src="/office_blog.jpg" alt="Office Blog">
+                    <span class="category-chip">Career</span>
+                </div>
+                <div class="card-content">
+                    <p class="p_text">Productivity hacks, workspace trends, and professional growth insights.</p>
+                </div>
+            </div>
+
+            <div class="same">
+                <div class="card-img-container">
+                    <img src="/tech_blog.jpg" alt="Tech Blog">
+                    <span class="category-chip">Innovation</span>
+                </div>
+                <div class="card-content">
+                    <p class="p_text">Deep dives into coding, future tech trends, and digital world insights.</p>
+                </div>
+            </div>
+
+            <div class="same">
+                <div class="card-img-container">
+                    <img src="/lifestyle_blog.jpg" alt="Lifestyle Blog">
+                    <span class="category-chip">Wellness</span>
+                </div>
+                <div class="card-content">
+                    <p class="p_text">A blend of wellness tips, daily habits, and personal growth motivation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
 
 </body>
 </html>

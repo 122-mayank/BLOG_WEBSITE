@@ -1,55 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Office Blog | Waves of Words</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/office_blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Insights | Waves of Words</title>
+    <link rel="stylesheet" href="/office_blog.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="/blog.png" alt="Blog Logo">
-      <h1>Waves of Words</h1>
-    </div>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/signin">Sign In</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Stories from the Workspace</h1>
-      <p>From productivity hacks to workplace culture, explore stories that make professional life meaningful.</p>
-    </div>
-    <div class="hero-images">
-      <img src="/office_blog.jpg" alt="Office Blog">
-    </div>
-  </section>
+    <%- include('partials/header') %>
 
-  <section class="info">
-    <div class="info-card">
-      <h2>💻 Work-Life Balance</h2>
-      <p>Learn simple techniques to stay organized, manage time, and keep stress at bay.</p>
-    </div>
-    <div class="info-card">
-      <h2>👥 Team Talks</h2>
-      <p>Discover how collaboration, communication, and creativity shape modern office environments.</p>
-    </div>
-  </section>
+    <section class="office-hero">
+        <div class="hero-bg-accent"></div>
+        <div class="hero-content">
+            <span class="work-label">Optimize. Execute. Succeed.</span>
+            <h1>The Modern <span>Workspace</span></h1>
+            <p>Mastering productivity in the digital age. Insights for creators, leaders, and innovators.</p>
+        </div>
+    </section>
 
-  <footer>
-    <div class="footer_class">
-      <h1 class="footer_h1">Waves of Words</h1>
-      <div class="second_box">
-        <h1>Blogs</h1>
-        <h1>Sign In</h1>
-      </div>
-    </div>
-    <hr class="footer-hr">
-    <p class="copyright">© 2025 Waves of Words</p>
-  </footer>
+    <main class="office-container">
+        <div class="grid-layout">
+            
+            <article class="office-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800" alt="Deep Work">
+                </div>
+                <div class="card-inner">
+                    <div class="card-tag">Deep Work</div>
+                    <h3>The 4 - Hour Focus State Work</h3>
+                    <p>Learn the cognitive science behind deep work and how to eliminate digital distractions for peak performance.</p>
+                    <div class="card-meta">
+                        <span class="read-time">6 min read</span>
+                        <a href="#" class="action-link">Open File →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="office-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800" alt="Office Setup">
+                </div>
+                <div class="card-inner">
+                    <div class="card-tag">Tech Stack</div>
+                    <h3>Minimalist Desk Setup 2026</h3>
+                    <p>Exploring the essential hardware and ergonomics that foster creativity without the clutter.</p>
+                    <div class="card-meta">
+                        <span class="read-time">8 min read</span>
+                        <a href="#" class="action-link">Open File →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="office-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800" alt="Team Meeting">
+                </div>
+                <div class="card-inner">
+                    <div class="card-tag">Leadership</div>
+                    <h3>Remote Culture Dynamics</h3>
+                    <p>How to build trust and maintain team synergy across different time zones in a post-office world.</p>
+                    <div class="card-meta">
+                        <span class="read-time">5 min read</span>
+                        <a href="#" class="action-link">Open File →</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
 </body>
 </html>

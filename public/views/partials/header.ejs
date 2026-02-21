@@ -1,31 +1,36 @@
 <header class="header">
-  <div class="logo">
-      <img src="/blog.png" alt="Blog Logo">
-      <h1>Waves of Words</h1>
-  </div>
-
-  <!-- Mobile Menu Button -->
-  <button class="menu-btn" id="menu-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-  </button>
-
-  <nav id="navbar">
-    <a href="/">Home</a>
-
-    <div class="dropdown">
-      <button class="dropbtn">Blogs</button>
-      <div class="dropdown-content">
-        <a href="/food_blog">Food Blog</a>
-        <a href="/adventure_blog">Adventure Blog</a>
-        <a href="/notes_blog">Notes Blog</a>
-        <a href="/office_blog">Office Blog</a>
-      </div>
+  <div class="header-container">
+    <div class="logo">
+        <div class="logo-icon-bg">
+            <img src="/blog.png" alt="Blog Logo">
+        </div>
+        <h1>Waves of <span>Words</span></h1>
     </div>
 
-    <a href="/signin" class="signin-btn">Sign In</a>
-  </nav>
+    <button class="menu-btn" id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="navbar">
+      <div class="nav-links">
+        <a href="/" class="nav-item">Home</a>
+
+        <div class="dropdown nav-item">
+          <button class="dropbtn">Explore Blogs <i class="chevron"></i></button>
+          <div class="dropdown-content">
+            <div class="drop-glow"></div>
+            <a href="/food_blog">Food & Flavors</a>
+            <a href="/adventure_blog">Wild Adventures</a>
+            <a href="/education_blog">Learning Academy</a>
+            <a href="/office_blog">Office Insights</a>
+          </div>
+        </div>
+  
+      </div>
+    </nav>
+  </div>
 </header>
 
 <script>
@@ -33,7 +38,15 @@
   const nav = document.getElementById("navbar");
 
   btn.addEventListener("click", () => {
-     nav.classList.toggle("active");
-     btn.classList.toggle("open");
+      nav.classList.toggle("active");
+      btn.classList.toggle("open");
+  });
+
+  // Close menu when clicking a link (Mobile)
+  document.querySelectorAll('.nav-item').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove("active");
+      btn.classList.remove("open");
+    });
   });
 </script>

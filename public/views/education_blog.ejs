@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Academy | Waves of Words</title>
+    <link rel="stylesheet" href="/education_blog.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <header class="edu-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="edu-tag">Knowledge is Power</span>
+            <h1>Cultivating the <span>Future.</span></h1>
+            <p>Bridging the gap between traditional wisdom and modern innovation. Explore the latest in pedagogy and personal growth.</p>
+        </div>
+    </header>
+
+    <main class="edu-container">
+        <div class="edu-grid">
+            
+            <article class="edu-card">
+                <div class="edu-img">
+                    <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800" alt="Library">
+                    <div class="edu-badge">New Research</div>
+                </div>
+                <div class="edu-info">
+                    <div class="edu-meta">Academic Excellence • 8 Min Read</div>
+                    <h2>The Evolution of Digital Literacy</h2>
+                    <p>How the shift to remote learning has redefined what it means to be "literate" in the 21st century and the impact on cognitive development.</p>
+                    <a href="#" class="edu-btn">Read Thesis →</a>
+                </div>
+            </article>
+
+            <article class="edu-card">
+                <div class="edu-img">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800" alt="Students">
+                </div>
+                <div class="edu-info">
+                    <div class="edu-meta">Student Success • 5 Min Read</div>
+                    <h2>Active Recall vs. Passive Reading</h2>
+                    <p>Science-backed study techniques that move information from short-term memory to lifelong mastery.</p>
+                    <a href="#" class="edu-btn">Read Thesis →</a>
+                </div>
+            </article>
+
+            <article class="edu-card">
+                <div class="edu-img">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800" alt="Teacher">
+                </div>
+                <div class="edu-info">
+                    <div class="edu-meta">Innovation • 12 Min Read</div>
+                    <h2>AI in the Modern Classroom</h2>
+                    <p>Exploring the delicate balance between utilizing Artificial Intelligence and preserving human critical thinking in schools.</p>
+                    <a href="#" class="edu-btn">Read Thesis →</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+    
+    <%- include('partials/footer') %>
+
+
+</body>
+</html>
