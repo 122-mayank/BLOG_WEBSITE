@@ -6,8 +6,6 @@ Built using the MERN stack with authentication and responsive UI.
 
 ## 🚀 Features
 
-- 🔐 User Authentication (Signup/Login)
-- 📝 Create, Edit & Delete Blog Posts
 - 📖 Read Blogs (Public Access)
 - 👤 User Dashboard
 - ❤️ Like & Comment System
@@ -28,11 +26,8 @@ Built using the MERN stack with authentication and responsive UI.
 ### Backend
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
 
 
----
 
-## 📂 Project Structure
+
 
